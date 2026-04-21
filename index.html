@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,32 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>働く人の相談室 よはく | 産業医・労働衛生コンサルタント事務所</title>
     <style>
-        /* 全体の設定：詩集のような余白と質感 */
+        /* 全体の設定：より白く、洗練されたモダンな印象に */
         body {
             margin: 0;
             padding: 0;
-            background-color: #f2f0e9; /* 紙のようなアイボリー */
-            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* 柔らかな紙の質感 */
-            color: #4a4a4a;
-            font-family: "Sawarabi Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
-            line-height: 2;
+            background-color: #fafafa; /* より白に近い明るいグレーベージュ */
+            color: #333333;
+            /* モダンで読みやすい明朝体を選択 */
+            font-family: "Noto Serif JP", "Hiragino Mincho ProN", serif;
+            line-height: 2.2;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .container {
-            max-width: 700px;
-            width: 90%;
-            padding: 100px 0; /* 上下の大きな余白 */
+            max-width: 750px;
+            width: 85%;
+            padding: 80px 0;
             text-align: center;
         }
 
+        /* ロゴ画像の設定 */
+        .logo-area {
+            margin-bottom: 60px;
+        }
+        .logo-area img {
+            max-width: 180px; /* ロゴの大きさを調整 */
+            height: auto;
+            /* 画像の背景をページに馴染ませるための設定 */
+            mix-blend-mode: multiply; 
+        }
+
         section {
-            margin-bottom: 120px; /* 各項目の間の余白 */
+            margin-bottom: 100px;
             opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1.5s forwards;
+            transform: translateY(15px);
+            animation: fadeIn 1.2s forwards;
         }
 
         @keyframes fadeIn {
@@ -39,40 +51,39 @@
 
         /* ① タイトル・キャッチフレーズ */
         h1 {
-            font-size: 1.8rem;
-            font-weight: normal;
-            letter-spacing: 0.2em;
-            margin-bottom: 10px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            margin-bottom: 8px;
         }
         .subtitle {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             letter-spacing: 0.1em;
-            color: #7a7a7a;
+            color: #888888;
             margin-bottom: 40px;
         }
         .catchphrase {
-            font-size: 1.1rem;
-            margin-top: 60px;
-            font-style: italic;
+            font-size: 1rem;
+            margin-top: 50px;
+            color: #555555;
+            font-weight: 300;
         }
 
         /* ② 業務内容 */
         h2 {
-            font-size: 1.2rem;
-            border-bottom: 1px solid #d1ced0;
+            font-size: 1.1rem;
             display: inline-block;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-            font-weight: normal;
+            padding-bottom: 12px;
+            margin-bottom: 35px;
+            font-weight: 500;
+            border-bottom: 1px solid #eeeeee;
         }
         .content-text {
             text-align: left;
-            font-size: 0.95rem;
-            word-break: break-all;
+            font-size: 0.92rem;
         }
         .highlight {
-            color: #8c7b6d;
-            font-weight: bold;
+            border-bottom: 1px solid #d1ced0; /* 控えめな強調 */
         }
 
         /* ③ 経歴 */
@@ -83,14 +94,14 @@
             font-size: 0.9rem;
         }
         .profile-list li {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         /* ④ ⑤ コンタクト & SNS */
         .links a {
-            color: #4a4a4a;
+            color: #333333;
             text-decoration: none;
-            border-bottom: 1px dotted #4a4a4a;
+            border-bottom: 1px solid #cccccc;
             transition: 0.3s;
         }
         .links a:hover {
@@ -101,20 +112,25 @@
             display: block;
             margin-top: 30px;
             font-size: 0.8rem;
+            color: #888888;
         }
 
         footer {
-            margin-top: 50px;
+            margin-top: 40px;
             font-size: 0.7rem;
-            color: #aaa;
-            padding-bottom: 50px;
+            color: #bbb;
+            padding-bottom: 60px;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="container">
+        <div class="logo-area">
+            <img src="logo.jpg" alt="よはく ロゴ">
+        </div>
+
         <section>
             <h1>働く人の相談室 よはく</h1>
             <p class="subtitle">産業医・労働衛生コンサルタント事務所</p>
@@ -127,7 +143,7 @@
                 <p>労働衛生コンサルタント、精神保健指定医、精神科専門医の資格を持った医師が担当し、特に<span class="highlight">メンタルヘルス対策</span>を得意としています。</p>
                 <p>長時間労働者・高ストレス者の面談・ストレスチェックの導入、その他健康相談、職場巡視・安全衛生委員会・衛生講話等のお役に立てます。</p>
                 <p>初めて産業医の選任義務が生じた事業所はもちろん、すでに産業医を選任しておりセカンドオピニオンを求めたい企業様、従業員50人未満の事業所の方もお気軽にご相談ください。<br>
-                <span class="highlight">※初回相談は無料です。</span></p>
+                初回相談は無料です。</p>
             </div>
         </section>
 
