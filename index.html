@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>働く人の相談室 よはく | 産業医・労働衛生コンサルタント事務所</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -23,12 +25,11 @@
             text-align: center;
         }
 
-        /* ① トップ画面を画面いっぱいに広げる設定 */
         .hero-section {
-            min-height: 100vh; /* 画面の高さ100%分を確保 */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* 中央に配置 */
+            justify-content: center;
             align-items: center;
             padding: 40px 0;
             box-sizing: border-box;
@@ -80,7 +81,7 @@
             margin-bottom: 20px;
         }
         .highlight {
-            border-bottom: 1px solid #d1ced0;
+            border-bottom: 1px solid #d1ced0; /* 柔らかい下線 */
         }
         .profile-list {
             list-style: none;
@@ -90,7 +91,7 @@
             margin-bottom: 15px;
         }
 
-        /* 問い合わせフォームのスタイル */
+        /* 問い合わせフォーム */
         .contact-form {
             text-align: left;
             max-width: 500px;
@@ -119,31 +120,37 @@
         .form-group input:focus, .form-group textarea:focus {
             border-color: #8c7b6d;
         }
+        /* 送信ボタンを薄く柔らかい色に修正 */
         .submit-btn {
             display: block;
             width: 100%;
             padding: 15px;
-            background-color: #4a4a4a;
-            color: #fff;
-            border: none;
+            background-color: #f0edea; /* 薄いベージュグレー */
+            color: #777777; /* 文字色も少し柔らかく */
+            border: 1px solid #e0e0e0;
             font-family: inherit;
             font-size: 1rem;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
             letter-spacing: 0.1em;
         }
         .submit-btn:hover {
-            background-color: #8c7b6d;
+            background-color: #e8e4e1;
+            color: #333;
         }
 
-        .insta-link {
-            display: block;
+        /* インスタアイコンの設定 */
+        .insta-area {
             margin-top: 50px;
-            font-size: 0.85rem;
+        }
+        .insta-link {
             color: #888888;
+            font-size: 1.8rem; /* アイコンを少し大きめに */
             text-decoration: none;
-            border-bottom: 1px solid #cccccc;
-            display: inline-block;
+            transition: 0.3s;
+        }
+        .insta-link:hover {
+            color: #8c7b6d;
         }
 
         footer {
@@ -153,7 +160,6 @@
             padding-bottom: 60px;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -175,7 +181,7 @@
                 その他健康相談、職場巡視・安全衛生委員会・衛生講話等のお役に立てます。</p>
                 <p>初めて産業医の選任義務が生じた事業所はもちろん、すでに産業医を選任しており<br>
                 セカンドオピニオンを求めたい企業様、従業員50人未満の事業所の方もお気軽にご相談ください。</p>
-                <p><strong>※初回相談は無料です。</strong></p>
+                <p><span class="highlight">※初回相談は無料です。</span></p>
             </div>
         </section>
 
@@ -208,9 +214,11 @@
                 <button type="submit" class="submit-btn">送信する</button>
             </form>
             
-            <a href="https://www.instagram.com/yohaku.mhealth/" class="insta-link" target="_blank">
-                Instagram: @yohaku.mhealth
-            </a>
+            <div class="insta-area">
+                <a href="https://www.instagram.com/yohaku.mhealth/" class="insta-link" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
         </section>
 
         <footer>
