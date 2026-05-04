@@ -71,6 +71,12 @@
             line-height: 2.2;
         }
 
+        /* 魔法の設定：スパンで囲んだ言葉を途中で改行させない */
+        .catchphrase span {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
         h2 {
             font-size: 1.1rem;
             display: inline-block;
@@ -175,13 +181,14 @@
             padding-bottom: 60px;
         }
 
+        /* スマホ向けの最終調整 */
         @media screen and (max-width: 480px) {
             .catchphrase {
-                font-size: 0.82rem;
+                font-size: 0.8rem; /* 少しだけ小さくして余裕を持たせる */
                 letter-spacing: 0.01em;
             }
             .container {
-                width: 90%;
+                width: 92%; /* 左右の余白を少し広げ、中央に寄せやすくする */
             }
         }
     </style>
@@ -196,10 +203,10 @@
             <h1>働く人の相談室 よはく</h1>
             <p class="subtitle">産業医・労働衛生コンサルタント事務所</p>
             <div class="catchphrase">
-                行き詰まった状況で　ふっと視界が開ける<br>
-                こなすだけの日常が　急に色づいて見える<br><br>
-                心の 余白 を生み出すことで　誰もが健やかに<br>
-                その人らしく働ける社会を目指して
+                <span>行き詰まった状況で</span>　<span>ふっと視界が開ける</span><br>
+                <span>こなすだけの日常が</span>　<span>急に色づいて見える</span><br><br>
+                <span>心の 余白 を生み出すことで</span>　<span>誰もが健やかに</span><br>
+                <span>その人らしく働ける社会を目指して</span>
             </div>
         </div>
 
@@ -232,7 +239,6 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <!-- Formspree IDの書き換えをお忘れなく -->
             <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="name">お名前</label>
