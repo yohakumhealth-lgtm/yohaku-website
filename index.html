@@ -11,7 +11,6 @@
             margin: 0;
             padding: 0;
             background-color: #fafafa;
-            /* 全体の文字色を柔らかいグレーに変更 */
             color: #555555;
             font-family: "Noto Serif JP", "Hiragino Mincho ProN", serif;
             line-height: 2.2;
@@ -38,7 +37,7 @@
 
         .logo-area img {
             max-width: 580px;
-            width: 100%; /* スマホで画面からはみ出さないように */
+            width: 100%;
             height: auto;
             mix-blend-mode: multiply; 
             margin-bottom: 10px;
@@ -49,7 +48,6 @@
             padding-top: 60px;
         }
 
-        /* 見出しの色も少しだけ濃いグレーに調整 */
         h1 {
             font-size: 1.5rem;
             font-weight: 500;
@@ -69,8 +67,8 @@
             margin-top: 30px;
             color: #555555;
             font-weight: 300;
-            letter-spacing: 0.05em; /* 文字間隔を少し詰めました */
-            line-height: 2.0;
+            letter-spacing: 0.05em;
+            line-height: 2.2;
         }
 
         h2 {
@@ -114,7 +112,6 @@
             letter-spacing: 0.3em;
         }
 
-        /* 問い合わせフォーム */
         .contact-form {
             text-align: left;
             max-width: 500px;
@@ -178,14 +175,13 @@
             padding-bottom: 60px;
         }
 
-        /* スマホ向けの微調整 */
         @media screen and (max-width: 480px) {
             .catchphrase {
-                font-size: 0.85rem; /* スマホでは少し小さくして一行に収めやすく */
-                letter-spacing: 0.02em; /* さらに文字間隔を詰める */
+                font-size: 0.82rem;
+                letter-spacing: 0.01em;
             }
             .container {
-                width: 90%; /* 画面端の余白を少し削って表示エリアを広げる */
+                width: 90%;
             }
         }
     </style>
@@ -202,8 +198,8 @@
             <div class="catchphrase">
                 行き詰まった状況で　ふっと視界が開ける<br>
                 こなすだけの日常が　急に色づいて見える<br><br>
-                心の 余白 を生み出すことで<br>
-                誰もが健やかに　その人らしく働ける社会を目指して
+                心の 余白 を生み出すことで　誰もが健やかに<br>
+                その人らしく働ける社会を目指して
             </div>
         </div>
 
@@ -225,7 +221,7 @@
                 <li>名古屋大学医学部卒</li>
                 <li>総合病院にて3年間の全科研修</li>
                 <li>名古屋大学医学部付属病院精神科に入局</li>
-                <li>単科精神科、総合病院精神科外来勤務を経て、<br>
+                <li>単科精神科、総合病院勤務を経て、<br>
                 現在はメンタルクリニックでの診療業務・企業での健康管理に携わっています。</li>
             </ul>
             <p class="signature">
@@ -236,6 +232,7 @@
 
         <section id="contact">
             <h2>Contact</h2>
+            <!-- Formspree IDの書き換えをお忘れなく -->
             <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="name">お名前</label>
