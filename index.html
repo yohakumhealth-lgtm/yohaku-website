@@ -11,7 +11,8 @@
             margin: 0;
             padding: 0;
             background-color: #fafafa;
-            color: #333333;
+            /* 全体の文字色を柔らかいグレーに変更 */
+            color: #555555;
             font-family: "Noto Serif JP", "Hiragino Mincho ProN", serif;
             line-height: 2.2;
             display: flex;
@@ -36,7 +37,8 @@
         }
 
         .logo-area img {
-            max-width: 580px; /* ロゴを大きく戻しました */
+            max-width: 580px;
+            width: 100%; /* スマホで画面からはみ出さないように */
             height: auto;
             mix-blend-mode: multiply; 
             margin-bottom: 10px;
@@ -47,11 +49,13 @@
             padding-top: 60px;
         }
 
+        /* 見出しの色も少しだけ濃いグレーに調整 */
         h1 {
             font-size: 1.5rem;
             font-weight: 500;
             letter-spacing: 0.15em;
             margin-bottom: 8px;
+            color: #4a4a4a;
         }
         .subtitle {
             font-size: 0.8rem;
@@ -61,12 +65,12 @@
         }
         
         .catchphrase {
-            font-size: 0.9rem; /* 気持ち小さく、繊細に */
+            font-size: 0.9rem;
             margin-top: 30px;
             color: #555555;
             font-weight: 300;
-            letter-spacing: 0.1em;
-            line-height: 2.0; /* 行間を少し詰めました */
+            letter-spacing: 0.05em; /* 文字間隔を少し詰めました */
+            line-height: 2.0;
         }
 
         h2 {
@@ -76,6 +80,7 @@
             margin-bottom: 50px;
             font-weight: 500;
             border-bottom: 1px solid #eeeeee;
+            color: #4a4a4a;
         }
         .content-text, .profile-list {
             text-align: left;
@@ -109,6 +114,7 @@
             letter-spacing: 0.3em;
         }
 
+        /* 問い合わせフォーム */
         .contact-form {
             text-align: left;
             max-width: 500px;
@@ -121,7 +127,7 @@
             display: block;
             font-size: 0.85rem;
             margin-bottom: 8px;
-            color: #666;
+            color: #888888;
         }
         .form-group input, .form-group textarea {
             width: 100%;
@@ -132,6 +138,7 @@
             font-size: 0.95rem;
             box-sizing: border-box;
             outline: none;
+            color: #555555;
         }
         .submit-btn {
             display: block;
@@ -155,9 +162,13 @@
             margin-top: 50px;
         }
         .insta-link {
-            color: #888888;
+            color: #bbbbbb;
             font-size: 1.8rem;
             text-decoration: none;
+            transition: 0.3s;
+        }
+        .insta-link:hover {
+            color: #8c7b6d;
         }
 
         footer {
@@ -165,6 +176,17 @@
             font-size: 0.75rem;
             color: #bbb;
             padding-bottom: 60px;
+        }
+
+        /* スマホ向けの微調整 */
+        @media screen and (max-width: 480px) {
+            .catchphrase {
+                font-size: 0.85rem; /* スマホでは少し小さくして一行に収めやすく */
+                letter-spacing: 0.02em; /* さらに文字間隔を詰める */
+            }
+            .container {
+                width: 90%; /* 画面端の余白を少し削って表示エリアを広げる */
+            }
         }
     </style>
 </head>
@@ -177,12 +199,12 @@
             </div>
             <h1>働く人の相談室 よはく</h1>
             <p class="subtitle">産業医・労働衛生コンサルタント事務所</p>
-            <p class="catchphrase">
+            <div class="catchphrase">
                 行き詰まった状況で　ふっと視界が開ける<br>
                 こなすだけの日常が　急に色づいて見える<br><br>
                 心の 余白 を生み出すことで<br>
                 誰もが健やかに　その人らしく働ける社会を目指して
-            </p>
+            </div>
         </div>
 
         <section id="business">
@@ -214,7 +236,6 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <!-- Formspree IDを貼り付けてください -->
             <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="name">お名前</label>
