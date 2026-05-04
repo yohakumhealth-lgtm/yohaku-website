@@ -25,6 +25,7 @@
             text-align: center;
         }
 
+        /* ① トップ画面の調整：要素が増えても収まるよう余白を再計算 */
         .hero-section {
             min-height: 100vh;
             display: flex;
@@ -36,7 +37,7 @@
         }
 
         .logo-area img {
-            max-width: 600px;
+            max-width: 500px; /* 少しだけ小さくして、下の文章のスペースを確保 */
             height: auto;
             mix-blend-mode: multiply; 
             margin-bottom: 20px;
@@ -44,27 +45,30 @@
 
         section {
             margin-bottom: 120px;
-            padding-top: 40px;
+            padding-top: 60px;
         }
 
         h1 {
-            font-size: 1.6rem;
+            font-size: 1.5rem; /* わずかにサイズダウン */
             font-weight: 500;
             letter-spacing: 0.15em;
             margin-bottom: 8px;
         }
         .subtitle {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             letter-spacing: 0.1em;
             color: #888888;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
+        
+        /* 新しいキャッチフレーズ用のスタイル */
         .catchphrase {
-            font-size: 1.1rem;
-            margin-top: 50px;
+            font-size: 0.95rem; /* 長文でも圧迫感が出ないサイズ */
+            margin-top: 35px;
             color: #555555;
             font-weight: 300;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.1em;
+            line-height: 2.4; /* 行間を広げて「余白」を演出 */
         }
 
         h2 {
@@ -91,14 +95,13 @@
             margin-bottom: 15px;
         }
 
-        /* 署名部分の調整 */
         .signature {
             text-align: right;
             margin-top: 40px;
             color: #4a4a4a;
         }
         .signature .title {
-            font-size: 0.85rem; /* 肩書きを小さく */
+            font-size: 0.85rem;
             margin-right: 0.8em;
             color: #777777;
             letter-spacing: 0.1em;
@@ -108,6 +111,7 @@
             letter-spacing: 0.3em;
         }
 
+        /* 問い合わせフォーム */
         .contact-form {
             text-align: left;
             max-width: 500px;
@@ -131,10 +135,6 @@
             font-size: 0.95rem;
             box-sizing: border-box;
             outline: none;
-            transition: border-color 0.3s;
-        }
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: #8c7b6d;
         }
         .submit-btn {
             display: block;
@@ -161,10 +161,6 @@
             color: #888888;
             font-size: 1.8rem;
             text-decoration: none;
-            transition: 0.3s;
-        }
-        .insta-link:hover {
-            color: #8c7b6d;
         }
 
         footer {
@@ -178,13 +174,19 @@
 <body>
 
     <div class="container">
+        <!-- トップ画面部分 -->
         <div class="hero-section">
             <div class="logo-area">
                 <img src="logo.png" alt="よはく ロゴ">
             </div>
             <h1>働く人の相談室 よはく</h1>
             <p class="subtitle">産業医・労働衛生コンサルタント事務所</p>
-            <p class="catchphrase">誰もが健やかに、その人らしく働ける社会を</p>
+            <p class="catchphrase">
+                行き詰まった状況で　ふっと視界が開ける<br>
+                こなすだけの日常が　急に色づいて見える<br><br>
+                心の 余白 を生み出すことで<br>
+                誰もが健やかに　その人らしく働ける社会を目指して
+            </p>
         </div>
 
         <section id="business">
@@ -216,7 +218,8 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <form action="https://formspree.io/f/mlgapwlo" method="POST" class="contact-form">
+            <!-- 前回のFormspree IDを貼り付けてください -->
+            <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="name">お名前</label>
                     <input type="text" id="name" name="name" required>
