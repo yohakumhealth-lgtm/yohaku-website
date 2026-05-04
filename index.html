@@ -25,7 +25,6 @@
             text-align: center;
         }
 
-        /* ① トップ画面の調整：要素が増えても収まるよう余白を再計算 */
         .hero-section {
             min-height: 100vh;
             display: flex;
@@ -37,10 +36,10 @@
         }
 
         .logo-area img {
-            max-width: 500px; /* 少しだけ小さくして、下の文章のスペースを確保 */
+            max-width: 580px; /* ロゴを大きく戻しました */
             height: auto;
             mix-blend-mode: multiply; 
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         section {
@@ -49,7 +48,7 @@
         }
 
         h1 {
-            font-size: 1.5rem; /* わずかにサイズダウン */
+            font-size: 1.5rem;
             font-weight: 500;
             letter-spacing: 0.15em;
             margin-bottom: 8px;
@@ -61,14 +60,13 @@
             margin-bottom: 30px;
         }
         
-        /* 新しいキャッチフレーズ用のスタイル */
         .catchphrase {
-            font-size: 0.95rem; /* 長文でも圧迫感が出ないサイズ */
-            margin-top: 35px;
+            font-size: 0.9rem; /* 気持ち小さく、繊細に */
+            margin-top: 30px;
             color: #555555;
             font-weight: 300;
             letter-spacing: 0.1em;
-            line-height: 2.4; /* 行間を広げて「余白」を演出 */
+            line-height: 2.0; /* 行間を少し詰めました */
         }
 
         h2 {
@@ -111,7 +109,6 @@
             letter-spacing: 0.3em;
         }
 
-        /* 問い合わせフォーム */
         .contact-form {
             text-align: left;
             max-width: 500px;
@@ -174,7 +171,6 @@
 <body>
 
     <div class="container">
-        <!-- トップ画面部分 -->
         <div class="hero-section">
             <div class="logo-area">
                 <img src="logo.png" alt="よはく ロゴ">
@@ -218,7 +214,7 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <!-- 前回のFormspree IDを貼り付けてください -->
+            <!-- Formspree IDを貼り付けてください -->
             <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="name">お名前</label>
